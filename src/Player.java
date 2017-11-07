@@ -1,5 +1,6 @@
 /**
- * Stores the player's name and Roshambo value selected by the player.
+ * Stores the player's name, Roshambo value selected by the player, and their
+ * score.
  * 
  * @author Yasmin
  *
@@ -7,6 +8,7 @@
 public abstract class Player {
 	private String name;
 	private Roshambo roshambo;
+	private int score;
 
 	public abstract Roshambo generateRoshambo();
 
@@ -26,4 +28,11 @@ public abstract class Player {
 		this.roshambo = roshambo;
 	}
 
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
 }

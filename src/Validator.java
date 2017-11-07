@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Validator {
 	public static String getString(Scanner sc, String prompt) {
 		System.out.print(prompt);
@@ -11,16 +10,16 @@ public class Validator {
 	}
 
 	/**
-	 * Gets a string and validates that it's y/n. This is useful when prompting the
-	 * user to enter yes/no in order to get and validate their response.
+	 * Gets a string, validates that it's y/n, then returns true or false. This is
+	 * useful when prompting the user to enter yes/no.
 	 * 
 	 * @param sc
 	 *            scanner
 	 * @param prompt
 	 *            prompt to display to the user
-	 * @return y or n
+	 * @return true for yes and false for no
 	 */
-	public static String getYOrN(Scanner sc, String prompt) {
+	public static boolean getYOrN(Scanner sc, String prompt) {
 		System.out.print(prompt);
 
 		ArrayList<String> validOptions = new ArrayList<>();
@@ -38,7 +37,8 @@ public class Validator {
 		}
 
 		sc.nextLine(); // discard any other data entered on the line
-		return s;
+
+		return s.equalsIgnoreCase("y");
 	}
 
 	public static String getValidString(Scanner sc, String prompt, ArrayList<String> validOptions) {

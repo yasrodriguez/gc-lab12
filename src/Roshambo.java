@@ -1,5 +1,5 @@
 /**
- * Stores 3 values: rock, paper, and scissors.
+ * Defines the 3 valid values for the game: rock, paper, and scissors.
  * 
  * @author Yasmin
  *

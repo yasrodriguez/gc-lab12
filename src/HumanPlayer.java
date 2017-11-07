@@ -22,7 +22,7 @@ public class HumanPlayer extends Player {
 		validOptions.add("p");
 		validOptions.add("s");
 
-		String userSelection = Validator.getValidString(scan, "Rock, paper, or scissors? (R/P/S)", validOptions);
+		String userSelection = Validator.getValidString(scan, "Rock, paper, or scissors? (R/P/S) ", validOptions);
 		if (userSelection.equalsIgnoreCase("R")) {
 			return Roshambo.ROCK;
 		} else if (userSelection.equalsIgnoreCase("P")) {
